@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		D61E18C12714846F0057147D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18C02714846F0057147D /* AppDelegate.swift */; };
 		D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18C22714846F0057147D /* SceneDelegate.swift */; };
-		D61E18C52714846F0057147D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18C42714846F0057147D /* ViewController.swift */; };
 		D61E18C82714846F0057147D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61E18C62714846F0057147D /* Main.storyboard */; };
 		D61E18CA271484700057147D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61E18C9271484700057147D /* Assets.xcassets */; };
 		D61E18CD271484700057147D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61E18CB271484700057147D /* LaunchScreen.storyboard */; };
+		D61E18D52714848D0057147D /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D61E18D42714848D0057147D /* unnamed.jpg */; };
+		D61E18D7271484B60057147D /* photo_2021-10-10 18.43.46.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D61E18D6271484B60057147D /* photo_2021-10-10 18.43.46.jpeg */; };
+		D61E18DE2714852B0057147D /* ContentAppUIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DB2714852B0057147D /* ContentAppUIBuilder.swift */; };
+		D61E18DF2714852B0057147D /* ContentAppUIPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DC2714852B0057147D /* ContentAppUIPlan.swift */; };
+		D61E18E02714852B0057147D /* ContentAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DD2714852B0057147D /* ContentAppViewController.swift */; };
+		D61E18E52714854E0057147D /* StackViewTitledItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E12714854E0057147D /* StackViewTitledItem.swift */; };
+		D61E18E62714854E0057147D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E22714854E0057147D /* AccountView.swift */; };
+		D61E18E72714854E0057147D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E32714854E0057147D /* AccountViewController.swift */; };
+		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D61E18BD2714846F0057147D /* Tonight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tonight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E18C02714846F0057147D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D61E18C22714846F0057147D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D61E18C42714846F0057147D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D61E18C72714846F0057147D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D61E18C9271484700057147D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D61E18CC271484700057147D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D61E18CE271484700057147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61E18D42714848D0057147D /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
+		D61E18D6271484B60057147D /* photo_2021-10-10 18.43.46.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo_2021-10-10 18.43.46.jpeg"; sourceTree = "<group>"; };
+		D61E18DB2714852B0057147D /* ContentAppUIBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAppUIBuilder.swift; sourceTree = "<group>"; };
+		D61E18DC2714852B0057147D /* ContentAppUIPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAppUIPlan.swift; sourceTree = "<group>"; };
+		D61E18DD2714852B0057147D /* ContentAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentAppViewController.swift; sourceTree = "<group>"; };
+		D61E18E12714854E0057147D /* StackViewTitledItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewTitledItem.swift; sourceTree = "<group>"; };
+		D61E18E22714854E0057147D /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		D61E18E32714854E0057147D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,47 @@
 		D61E18BF2714846F0057147D /* Tonight */ = {
 			isa = PBXGroup;
 			children = (
+				D61E18D9271484E10057147D /* ViewController */,
+				D61E18D8271484D20057147D /* Model */,
 				D61E18C02714846F0057147D /* AppDelegate.swift */,
 				D61E18C22714846F0057147D /* SceneDelegate.swift */,
-				D61E18C42714846F0057147D /* ViewController.swift */,
 				D61E18C62714846F0057147D /* Main.storyboard */,
 				D61E18C9271484700057147D /* Assets.xcassets */,
+				D61E18D42714848D0057147D /* unnamed.jpg */,
+				D61E18D6271484B60057147D /* photo_2021-10-10 18.43.46.jpeg */,
 				D61E18CB271484700057147D /* LaunchScreen.storyboard */,
 				D61E18CE271484700057147D /* Info.plist */,
 			);
 			path = Tonight;
+			sourceTree = "<group>";
+		};
+		D61E18D8271484D20057147D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D61E18D9271484E10057147D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D61E18DB2714852B0057147D /* ContentAppUIBuilder.swift */,
+				D61E18DC2714852B0057147D /* ContentAppUIPlan.swift */,
+				D61E18DD2714852B0057147D /* ContentAppViewController.swift */,
+				D61E18DA271484F40057147D /* GrandeViewContollers */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D61E18DA271484F40057147D /* GrandeViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				D61E18E42714854E0057147D /* AccountHeaderView.swift */,
+				D61E18E22714854E0057147D /* AccountView.swift */,
+				D61E18E32714854E0057147D /* AccountViewController.swift */,
+				D61E18E12714854E0057147D /* StackViewTitledItem.swift */,
+			);
+			path = GrandeViewContollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61E18CD271484700057147D /* LaunchScreen.storyboard in Resources */,
+				D61E18D7271484B60057147D /* photo_2021-10-10 18.43.46.jpeg in Resources */,
 				D61E18CA271484700057147D /* Assets.xcassets in Resources */,
+				D61E18D52714848D0057147D /* unnamed.jpg in Resources */,
 				D61E18C82714846F0057147D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D61E18C52714846F0057147D /* ViewController.swift in Sources */,
+				D61E18E02714852B0057147D /* ContentAppViewController.swift in Sources */,
+				D61E18DE2714852B0057147D /* ContentAppUIBuilder.swift in Sources */,
+				D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */,
 				D61E18C12714846F0057147D /* AppDelegate.swift in Sources */,
+				D61E18E62714854E0057147D /* AccountView.swift in Sources */,
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
+				D61E18E52714854E0057147D /* StackViewTitledItem.swift in Sources */,
+				D61E18DF2714852B0057147D /* ContentAppUIPlan.swift in Sources */,
+				D61E18E72714854E0057147D /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

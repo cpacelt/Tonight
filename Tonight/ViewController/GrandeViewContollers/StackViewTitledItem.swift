@@ -7,23 +7,12 @@
 
 import UIKit
 
-class StackViewTitledItem: UIView {
+class StackViewTitledItem<T: UIView>: UIView {
 
     
-    //MARK: - Raitings storage view
-    let raitingsStorageView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemBackground
-        view.layer.cornerRadius = 10
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-        view.layer.shadowOpacity = 0.1
-        
-        let borderColor = UIColor(white: 0.05, alpha: 0.1)
-      
-        view.layer.borderColor = borderColor.cgColor
-        view.layer.borderWidth = 0.6
-        //view.layer.shadowRadius = 5
+    //MARK: Item content view
+    let itemView: T = {
+        let view = T()
         return view
     }()
     
@@ -42,18 +31,18 @@ class StackViewTitledItem: UIView {
         super.init(frame: CGRect.zero)
         
         self.addSubview(itemTitleLabel)
-        self.addSubview(raitingsStorageView)
+        self.addSubview(itemView)
         
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        raitingsStorageView.translatesAutoresizingMaskIntoConstraints = false
+        itemView.translatesAutoresizingMaskIntoConstraints = false
         
-        itemTitleLabel.leftAnchor.constraint(equalTo: raitingsStorageView.leftAnchor, constant: 5).isActive = true
+        itemTitleLabel.leftAnchor.constraint(equalTo: itemView.leftAnchor, constant: 5).isActive = true
         itemTitleLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
-        raitingsStorageView.topAnchor.constraint(equalTo: itemTitleLabel.bottomAnchor, constant: 10).isActive = true
-        raitingsStorageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
-        raitingsStorageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
-        raitingsStorageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        itemView.topAnchor.constraint(equalTo: itemTitleLabel.bottomAnchor, constant: 10).isActive = true
+        itemView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+        itemView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+        itemView.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
         self.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }

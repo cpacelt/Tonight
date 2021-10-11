@@ -21,6 +21,7 @@
 		D61E18E62714854E0057147D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E22714854E0057147D /* AccountView.swift */; };
 		D61E18E72714854E0057147D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E32714854E0057147D /* AccountViewController.swift */; };
 		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
+		D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E927148BDC0057147D /* RoundedRectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D61E18E22714854E0057147D /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D61E18E32714854E0057147D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
+		D61E18E927148BDC0057147D /* RoundedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				D61E18E22714854E0057147D /* AccountView.swift */,
 				D61E18E32714854E0057147D /* AccountViewController.swift */,
 				D61E18E12714854E0057147D /* StackViewTitledItem.swift */,
+				D61E18E927148BDC0057147D /* RoundedRectView.swift */,
 			);
 			path = GrandeViewContollers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				D61E18DE2714852B0057147D /* ContentAppUIBuilder.swift in Sources */,
 				D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */,
 				D61E18C12714846F0057147D /* AppDelegate.swift in Sources */,
+				D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */,
 				D61E18E62714854E0057147D /* AccountView.swift in Sources */,
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
 				D61E18E52714854E0057147D /* StackViewTitledItem.swift in Sources */,

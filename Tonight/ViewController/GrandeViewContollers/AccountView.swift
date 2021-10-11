@@ -24,8 +24,8 @@ class AccountView: UIView {
     }()
     
     //MARK: - Titled block
-    let blockView: StackViewTitledItem = {
-        let item = StackViewTitledItem()
+    let blockView: StackViewTitledItem<RoundedRectView> = {
+        let item = StackViewTitledItem<RoundedRectView>()
         item.itemTitleLabel.text = "Ваши оценки"
         return item
     }()

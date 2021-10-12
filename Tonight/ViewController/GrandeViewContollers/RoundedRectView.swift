@@ -50,12 +50,10 @@ class RoundedRectView<T: UIView>: UIView {
         roundedRect.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
         
-        // So bad...
-        contentView.widthAnchor.constraint(equalTo: roundedRect.widthAnchor).isActive = true
-        contentView.heightAnchor.constraint(equalTo: roundedRect.heightAnchor).isActive = true
-        contentView.centerXAnchor.constraint(equalTo: roundedRect.centerXAnchor).isActive = true
-        contentView.centerYAnchor.constraint(equalTo: roundedRect.centerYAnchor).isActive = true
-        
+        // So bad layout input view is superview... 
+        contentView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        contentView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+
     }
     
     required init?(coder: NSCoder) {

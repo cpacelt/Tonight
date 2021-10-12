@@ -11,25 +11,44 @@ class PairedRaitingView: UIView {
 
     let firstRaitingView = RaitingView()
     let secondRaitingView = RaitingView()
+    let stack = UIStackView()
+    
+    let lineView: UIView = {
+        let view = UIView()
+        let borderColor = UIColor(white: 0.05, alpha: 0.1)
+        view.layer.borderColor = borderColor.cgColor
+        view.layer.borderWidth = 0.6
+        return view
+    }()
     
     init() {
         super.init(frame: CGRect.zero)
         
-        self.addSubview(firstRaitingView)
-        self.addSubview(secondRaitingView)
+        stack.axis = .horizontal
+        stack.spacing = 30
+        stack.alignment = .center
         
+        stack.addArrangedSubview(firstRaitingView)
+        stack.addArrangedSubview(lineView)
+        stack.addArrangedSubview(secondRaitingView)
+        
+        self.addSubview(stack)
+
+        stack.translatesAutoresizingMaskIntoConstraints = false
         firstRaitingView.translatesAutoresizingMaskIntoConstraints = false
         secondRaitingView.translatesAutoresizingMaskIntoConstraints = false
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+
         
-        firstRaitingView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        firstRaitingView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        stack.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        stack.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        stack.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         
-        secondRaitingView.leftAnchor.constraint(equalTo: firstRaitingView.rightAnchor, constant: 20).isActive = true
-        secondRaitingView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        lineView.heightAnchor.constraint(equalTo: firstRaitingView.heightAnchor).isActive = true
+        lineView.widthAnchor.constraint(equalToConstant: 1).isActive = true
+
         
-        self.rightAnchor.constraint(equalTo: secondRaitingView.rightAnchor).isActive = true
-        
-        //self.backgroundColor = .systemIndigo
     }
     
     required init?(coder: NSCoder) {

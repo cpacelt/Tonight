@@ -23,10 +23,18 @@ class AccountView: UIView {
         return AccountHeaderView()
     }()
     
-    //MARK: - Titled block
-    let blockView: StackViewTitledItem<RoundedRectView> = {
-        let item = StackViewTitledItem<RoundedRectView>()
+    //MARK: - You marks view
+    let marksView: StackViewTitledItem<RoundedRectView<PairedRaitingView>> = {
+        let item = StackViewTitledItem<RoundedRectView<PairedRaitingView>>()
         item.itemTitleLabel.text = "Ваши оценки"
+        
+        item.itemView.contentView.firstRaitingView.setTitle("Рейтинг\nфильмов")
+        item.itemView.contentView.firstRaitingView.setRaiting(12)
+
+        
+        item.itemView.contentView.secondRaitingView.setRaiting(24)
+        item.itemView.contentView.secondRaitingView.setTitle("Рейтинг\nсериалов")
+        
         return item
     }()
     
@@ -38,14 +46,16 @@ class AccountView: UIView {
         self.addSubview(stack)
         
         stack.addArrangedSubview(headerView)
-        stack.addArrangedSubview(blockView)
+        stack.addArrangedSubview(marksView)
+        
                 
         self.stack.translatesAutoresizingMaskIntoConstraints = false
        
         stack.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         stack.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-
+        
+        
     }
     
     
@@ -54,10 +64,6 @@ class AccountView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Functions
     
-//    func setProfileImage(image: UIImage) {
-//        self.avatarImageView.image = image
-//    }
 }
 

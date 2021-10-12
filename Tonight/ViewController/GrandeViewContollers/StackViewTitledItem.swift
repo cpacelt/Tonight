@@ -10,6 +10,7 @@ import UIKit
 class StackViewTitledItem<T: UIView>: UIView {
 
     
+    
     //MARK: Item content view
     let itemView: T = {
         let view = T()
@@ -44,7 +45,7 @@ class StackViewTitledItem<T: UIView>: UIView {
         itemView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         itemView.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
-        self.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: itemView.bottomAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {

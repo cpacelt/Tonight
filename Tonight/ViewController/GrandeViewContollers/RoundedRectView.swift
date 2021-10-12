@@ -7,12 +7,12 @@
 
 import UIKit
 
-class RoundedRectView: UIView {
+class RoundedRectView<T: UIView>: UIView {
 
-    //MARK: - Raitings storage view
+    //MARK: - Rounded rect (container) view
     let roundedRect: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemIndigo
+        view.backgroundColor = .systemBackground
         view.layer.cornerRadius = 10
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -26,17 +26,36 @@ class RoundedRectView: UIView {
         return view
     }()
     
+    let contentView: T = {
+        return T()
+    }()
+    
+    
+
     
     init() {
         super.init(frame: CGRect.zero)
         
         self.addSubview(roundedRect)
+        self.addSubview(contentView)
+        
+        
         
         roundedRect.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
         roundedRect.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         roundedRect.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         roundedRect.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         roundedRect.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        
+        // So bad...
+        contentView.widthAnchor.constraint(equalTo: roundedRect.widthAnchor).isActive = true
+        contentView.heightAnchor.constraint(equalTo: roundedRect.heightAnchor).isActive = true
+        contentView.centerXAnchor.constraint(equalTo: roundedRect.centerXAnchor).isActive = true
+        contentView.centerYAnchor.constraint(equalTo: roundedRect.centerYAnchor).isActive = true
+        
     }
     
     required init?(coder: NSCoder) {

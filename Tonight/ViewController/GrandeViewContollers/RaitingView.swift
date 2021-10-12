@@ -36,6 +36,8 @@ final class RaitingView: UIView {
         titleLabel.leftAnchor.constraint(equalTo: suffixLabel.rightAnchor, constant: 5).isActive = true
         
         self.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: pointsLabel.bottomAnchor).isActive = true
+        
         
     }
     

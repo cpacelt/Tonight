@@ -7,8 +7,9 @@
 
 import UIKit
 
+// MARK: - NEED TO BE REWRITE WITH UICollectionView
 
-// MARK: Content app view controller
+// MARK: - Content app view controller
 // This class incapsulate view controller with generic main view. Main view adding to scroll view.
 // You can use all views to main view, fo example:
 //

@@ -76,7 +76,7 @@ final class ContentAppUIPlan {
 // MARK: Extension of ContentAppUIPlan which stored Tonight.app bulding plan
 extension ContentAppUIPlan {
     static let tonightAppPlan = ContentAppUIPlan(forControllersWithPreferences: [
-        (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
+        (BestViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
         (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
         (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
         (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .account, true))

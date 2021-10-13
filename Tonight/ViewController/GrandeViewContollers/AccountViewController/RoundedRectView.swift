@@ -39,8 +39,6 @@ class RoundedRectView<T: UIView>: UIView {
         self.addSubview(roundedRect)
         self.addSubview(contentView)
         
-        
-        
         roundedRect.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         

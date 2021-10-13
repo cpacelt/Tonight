@@ -9,29 +9,29 @@ import UIKit
 
 
 // MARK: ContentAppUIBuilder
-/* Class to build default application UI with UITabBarController and UINavigationController or its
- inheritors.
-    Array of UIViewControllers or its inheritors, to built in UI, passes in wrapper named NeedsNavigationFor.
- Builder should place in AppDelegate or SceneDelegate.
+// Class to build default application UI with UITabBarController and UINavigationController or its
+// inheritors.
+//    Array of ViewControllers and its preferences passes to builder in wrapper instance. Wrapper name is ContentAppUIPlan.
+// Builder should place in AppDelegate or SceneDelegate.
  
- For example:
+// For example:
  
- var viewControllersToBuiltIn = [
-     NeedsNavigationFor(UIViewController(), true),
-     NeedsNavigationFor(MyViewController(), true),
-     NeedsNavigationFor(ViewController(), true)
- ]
- 
- ContentAppUIBuilder<UITabBarController, UINavigationController>(built: viewControllersToBuiltIn, on: self.window)
+// let tonightAppPlan = ContentAppUIPlan(forControllersWithPreferences: [
+//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
+//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
+//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
+//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .account, true))
+// ],
+// globalTintColor: UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1))
+//
+// ContentAppUIBuilder<UITabBarController, UINavigationController>(with: plan, on: self.window)
 
- 
- */
+
 
 final class ContentAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     
     let window: UIWindow?
     private(set) var mainTabBarController: TB
-    //private let viewControllersWithBool: [NeedsNavigationFor]
     private let plan: ContentAppUIPlan?
     private(set) var viewControllersToTabBar = [UIViewController]()
     

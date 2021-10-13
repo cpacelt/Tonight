@@ -31,7 +31,6 @@ class AccountView: UIView {
         item.itemView.contentView.firstRaitingView.setTitle("Рейтинг\nфильмов")
         item.itemView.contentView.firstRaitingView.setRaiting(12)
 
-        
         item.itemView.contentView.secondRaitingView.setRaiting(24)
         item.itemView.contentView.secondRaitingView.setTitle("Рейтинг\nсериалов")
         
@@ -48,13 +47,11 @@ class AccountView: UIView {
         stack.addArrangedSubview(headerView)
         stack.addArrangedSubview(marksView)
         
-                
         self.stack.translatesAutoresizingMaskIntoConstraints = false
        
         stack.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         stack.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        
         
     }
     

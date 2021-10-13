@@ -24,7 +24,6 @@ class AccountHeaderView: UIView {
     }()
 
     // MARK: - Nickname label
-
     let nicknameLabel: UILabel = {
         let text = "cpacelt"
         let label = UILabel()

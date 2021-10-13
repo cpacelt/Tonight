@@ -22,6 +22,7 @@
 		D61E18E72714854E0057147D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E32714854E0057147D /* AccountViewController.swift */; };
 		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
 		D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E927148BDC0057147D /* RoundedRectView.swift */; };
+		D65AE4772716C584004DA9A2 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4762716C584004DA9A2 /* BestViewController.swift */; };
 		D67E863E27159CC20004D1DD /* RaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E863D27159CC20004D1DD /* RaitingView.swift */; };
 		D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E863F2715C1290004D1DD /* PairedRaitingView.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		D61E18E32714854E0057147D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		D61E18E927148BDC0057147D /* RoundedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectView.swift; sourceTree = "<group>"; };
+		D65AE4762716C584004DA9A2 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		D67E863D27159CC20004D1DD /* RaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingView.swift; sourceTree = "<group>"; };
 		D67E863F2715C1290004D1DD /* PairedRaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedRaitingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,15 @@
 		D61E18DA271484F40057147D /* GrandeViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				D65AE4752716C3B1004DA9A2 /* BestViewController */,
+				D65AE4742716C0CF004DA9A2 /* AccountViewController */,
+			);
+			path = GrandeViewContollers;
+			sourceTree = "<group>";
+		};
+		D65AE4742716C0CF004DA9A2 /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
 				D61E18E32714854E0057147D /* AccountViewController.swift */,
 				D61E18E22714854E0057147D /* AccountView.swift */,
 				D61E18E42714854E0057147D /* AccountHeaderView.swift */,
@@ -121,7 +132,15 @@
 				D67E863D27159CC20004D1DD /* RaitingView.swift */,
 				D67E863F2715C1290004D1DD /* PairedRaitingView.swift */,
 			);
-			path = GrandeViewContollers;
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		D65AE4752716C3B1004DA9A2 /* BestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D65AE4762716C584004DA9A2 /* BestViewController.swift */,
+			);
+			path = BestViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65AE4772716C584004DA9A2 /* BestViewController.swift in Sources */,
 				D61E18E02714852B0057147D /* ContentAppViewController.swift in Sources */,
 				D67E863E27159CC20004D1DD /* RaitingView.swift in Sources */,
 				D61E18DE2714852B0057147D /* ContentAppUIBuilder.swift in Sources */,

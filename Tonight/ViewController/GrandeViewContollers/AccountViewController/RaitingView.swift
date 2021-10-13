@@ -50,6 +50,8 @@ final class RaitingView: UIView {
         prepare(with: 0, labeled: "")
     }
     
+    //Magic numbers
+    
     func setRaiting(_ points: Int, with suffix: String = "%") {
         pointsLabel.attributedText = NSAttributedString(string: String(points), attributes: [
             .font : UIFont(name: "HelveticaNeue-Bold", size: 38),

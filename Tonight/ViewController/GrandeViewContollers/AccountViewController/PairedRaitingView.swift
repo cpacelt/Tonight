@@ -9,19 +9,21 @@ import UIKit
 
 class PairedRaitingView: UIView {
 
+    
     let firstRaitingView = RaitingView()
     let secondRaitingView = RaitingView()
-    let stack = UIStackView()
+    private let stack = UIStackView()
     
-    let lineView: UIView = {
+    private let lineView: UIView = {
         let view = UIView()
-        let borderColor = UIColor(white: 0.05, alpha: 0.1)
+        let borderColor = UIColor(white: 0.05, alpha: 0.1)  //Magic numbers
         view.layer.borderColor = borderColor.cgColor
-        view.layer.borderWidth = 0.6
+        view.layer.borderWidth = 0.6 // Magic numbers
         return view
     }()
     
     init() {
+        
         super.init(frame: CGRect.zero)
         
         stack.axis = .horizontal
@@ -39,7 +41,6 @@ class PairedRaitingView: UIView {
         secondRaitingView.translatesAutoresizingMaskIntoConstraints = false
         lineView.translatesAutoresizingMaskIntoConstraints = false
 
-        
         stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         stack.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         stack.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
@@ -47,7 +48,6 @@ class PairedRaitingView: UIView {
         
         lineView.heightAnchor.constraint(equalTo: firstRaitingView.heightAnchor).isActive = true
         lineView.widthAnchor.constraint(equalToConstant: 1).isActive = true
-
         
     }
     

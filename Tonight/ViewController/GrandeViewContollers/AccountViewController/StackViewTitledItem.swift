@@ -9,8 +9,6 @@ import UIKit
 
 class StackViewTitledItem<T: UIView>: UIView {
 
-    
-    
     //MARK: Item content view
     let itemView: T = {
         let view = T()

@@ -7,7 +7,17 @@
 
 import UIKit
 
+
+// MARK: Content app view controller
+// This class incapsulate view controller with generic main view. Main view adding to scroll view.
+// You can use all views to main view, fo example:
+//
+// AccountViewController: ContentAppViewController<AccountView> { ... }
+//
+// Abstract view controller let you organize you code and solve massive view controller problem
+//
 class ContentAppViewController<T: UIView>: UIViewController {
+    
     
     var backgroundScrollView = UIScrollView()
     var mainView = T()
@@ -26,7 +36,7 @@ class ContentAppViewController<T: UIView>: UIViewController {
         self.backgroundScrollView.addSubview(mainView)
         
         
-        // MARK: WARNING! If delete this line scroll view spop scrolling. WTF?
+        // MARK: WARNING! If delete this line scroll view stop scrolling. WTF?
         backgroundScrollView.backgroundColor = .systemBackground
         backgroundScrollView.showsVerticalScrollIndicator = false
         //
@@ -37,6 +47,9 @@ class ContentAppViewController<T: UIView>: UIViewController {
         
     }
     
+    // MARK: - Layouting
+    // ContentAppViewController strech background scroll view to content view bounds, not screen bounds.
+    //
     private func layoutViews() {
         self.backgroundScrollView.translatesAutoresizingMaskIntoConstraints = false
         self.mainView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +69,9 @@ class ContentAppViewController<T: UIView>: UIViewController {
         
     }
     
+    
+    // Marked to rewrite...
+    // Large title scroll issue
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         

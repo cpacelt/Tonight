@@ -13,9 +13,12 @@ final class RaitingView: UIView {
     var titleLabel = UILabel()
     var suffixLabel = UILabel()
 
-    private func prepare(with points: Int, labeled title: String, _ suffix: String = "%") {
-   
+    private func prepare(with points: Int = 0, labeled title: String = "", _ suffix: String = "%") {
+       
         titleLabel.numberOfLines = 2
+        
+        setRaiting(points, with: suffix)
+        setTitle(title)
         
         self.addSubview(pointsLabel)
         self.addSubview(suffixLabel)
@@ -47,7 +50,7 @@ final class RaitingView: UIView {
     
     init(){
         super.init(frame: CGRect.zero)
-        prepare(with: 0, labeled: "")
+        prepare()
     }
     
     //Magic numbers

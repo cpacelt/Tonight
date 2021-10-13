@@ -40,20 +40,23 @@ final class ContentAppVCPreferences {
 
 // MARK: Extension of UITabBarItem which stored Tonight.app UITabBarItems
 extension UITabBarItem {
+    
+    static let mediumConfiguration = UIImage.SymbolConfiguration(weight: .bold)
+    
     static let best = {
-        return UITabBarItem(title: "Лучшее", image: UIImage(systemName: "heart.text.square"), selectedImage: UIImage(systemName: "heart.text.square.fill"))
+        return UITabBarItem(title: "Лучшее", image: UIImage(systemName: "heart.text.square", withConfiguration: mediumConfiguration), selectedImage: UIImage(systemName: "heart.text.square.fill"))
     }()
     
     static let account = {
-        return UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle"), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
+        return UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.circle", withConfiguration: mediumConfiguration), selectedImage: UIImage(systemName: "person.crop.circle.fill"))
     }()
     
     static let films = {
-        return UITabBarItem(title: "Подборки", image: UIImage(systemName: "film"), selectedImage: UIImage(systemName: "film.fill"))
+        return UITabBarItem(title: "Подборки", image: UIImage(systemName: "film", withConfiguration: mediumConfiguration), selectedImage: UIImage(systemName: "film.fill"))
     }()
     
     static let search = {
-        return UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass"))
+        return UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass", withConfiguration: mediumConfiguration), selectedImage: UIImage(systemName: "magnifyingglass"))
     }()
 }
 

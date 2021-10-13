@@ -11,8 +11,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "FilmCollectionViewCellIdentifier"
     
-    
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.attributedText = NSAttributedString(
@@ -35,12 +33,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let raitingView: RaitingView = {
-        let r = RaitingView()
-        r.setRaiting(99)
-        return r
-    }()
-    
     
     let posterImageView: UIImageView = {
         let image = UIImage(named: "dune")
@@ -55,12 +47,10 @@ class FilmCollectionViewCell: UICollectionViewCell {
         super.init(frame: .zero)
         
         contentView.addSubview(posterImageView)
-        contentView.addSubview(raitingView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(genresLabel)
         
         posterImageView.translatesAutoresizingMaskIntoConstraints = false
-        raitingView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         genresLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -68,11 +58,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
         posterImageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         posterImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
         posterImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        
-        
-        // Magic numbers
-        raitingView.rightAnchor.constraint(equalTo: posterImageView.rightAnchor, constant: -10).isActive = true
-        raitingView.topAnchor.constraint(equalTo: posterImageView.topAnchor, constant: 10).isActive = true
         
         titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: genresLabel.topAnchor, constant: -5).isActive = true

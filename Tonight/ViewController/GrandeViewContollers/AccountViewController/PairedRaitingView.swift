@@ -37,8 +37,6 @@ class PairedRaitingView: UIView {
         self.addSubview(stack)
 
         stack.translatesAutoresizingMaskIntoConstraints = false
-        firstRaitingView.translatesAutoresizingMaskIntoConstraints = false
-        secondRaitingView.translatesAutoresizingMaskIntoConstraints = false
         lineView.translatesAutoresizingMaskIntoConstraints = false
 
         stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true

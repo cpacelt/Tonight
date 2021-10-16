@@ -23,7 +23,7 @@
 		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
 		D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E927148BDC0057147D /* RoundedRectView.swift */; };
 		D65AE4772716C584004DA9A2 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4762716C584004DA9A2 /* BestViewController.swift */; };
-		D65AE4792716EE70004DA9A2 /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4782716EE70004DA9A2 /* FilmCollectionViewCell.swift */; };
+		D65AE4792716EE70004DA9A2 /* FilmViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4782716EE70004DA9A2 /* FilmViewCell.swift */; };
 		D65AE47B2717140D004DA9A2 /* dune.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D65AE47A2717140D004DA9A2 /* dune.jpeg */; };
 		D67E863E27159CC20004D1DD /* RaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E863D27159CC20004D1DD /* RaitingView.swift */; };
 		D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E863F2715C1290004D1DD /* PairedRaitingView.swift */; };
@@ -48,7 +48,7 @@
 		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		D61E18E927148BDC0057147D /* RoundedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectView.swift; sourceTree = "<group>"; };
 		D65AE4762716C584004DA9A2 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
-		D65AE4782716EE70004DA9A2 /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
+		D65AE4782716EE70004DA9A2 /* FilmViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewCell.swift; sourceTree = "<group>"; };
 		D65AE47A2717140D004DA9A2 /* dune.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dune.jpeg; sourceTree = "<group>"; };
 		D67E863D27159CC20004D1DD /* RaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingView.swift; sourceTree = "<group>"; };
 		D67E863F2715C1290004D1DD /* PairedRaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedRaitingView.swift; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 		D61E18BF2714846F0057147D /* Tonight */ = {
 			isa = PBXGroup;
 			children = (
-				D61E18D9271484E10057147D /* ViewController */,
-				D61E18D8271484D20057147D /* Model */,
 				D61E18C02714846F0057147D /* AppDelegate.swift */,
 				D61E18C22714846F0057147D /* SceneDelegate.swift */,
+				D61E18D9271484E10057147D /* ViewController */,
+				D61E18D8271484D20057147D /* Model */,
 				D61E18C62714846F0057147D /* Main.storyboard */,
 				D61E18C9271484700057147D /* Assets.xcassets */,
 				D65AE47A2717140D004DA9A2 /* dune.jpeg */,
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D65AE4762716C584004DA9A2 /* BestViewController.swift */,
-				D65AE4782716EE70004DA9A2 /* FilmCollectionViewCell.swift */,
+				D65AE4782716EE70004DA9A2 /* FilmViewCell.swift */,
 			);
 			path = BestViewController;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */,
 				D61E18C12714846F0057147D /* AppDelegate.swift in Sources */,
 				D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */,
-				D65AE4792716EE70004DA9A2 /* FilmCollectionViewCell.swift in Sources */,
+				D65AE4792716EE70004DA9A2 /* FilmViewCell.swift in Sources */,
 				D61E18E62714854E0057147D /* AccountView.swift in Sources */,
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
 				D61E18E52714854E0057147D /* StackViewTitledItem.swift in Sources */,

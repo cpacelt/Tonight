@@ -72,3 +72,4 @@ class FilmCollectionViewCell: UICollectionViewCell {
     }
     
 }
+

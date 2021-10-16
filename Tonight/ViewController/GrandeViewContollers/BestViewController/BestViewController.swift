@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class BestViewController: UIViewController {
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.view.backgroundColor = .systemBackground
         self.title = self.tabBarItem.title
@@ -24,29 +24,25 @@ class BestViewController: UIViewController {
         self.view.addSubview(collection)
         collection.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        
         collection.delegate = self
         collection.dataSource = self
         // Do any additional setup after loading the view.
     }
 
     
-    func createUICollectionViewLayout() -> UICollectionViewLayout {
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.8))
+    private func createUICollectionViewLayout() -> UICollectionViewLayout {
+                
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.9))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .absolute(250))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(20)
-        
+              
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-       // section.interGroupSpacing = 20
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 15, bottom: 0, trailing: 15)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
-        
     }
     
 }
@@ -60,13 +56,11 @@ extension BestViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmCollectionViewCell.identifier, for: indexPath)
-        
-        //cell.contentView.addSubview(RaitingView())
-       // cell.backgroundColor = .systemIndigo
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmCollectionViewCell.identifier, for: indexPath) as! FilmCollectionViewCell
         
         return cell
     }
+    
     
     
 }

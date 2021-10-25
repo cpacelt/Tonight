@@ -60,7 +60,5 @@ extension BestViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         
         return cell
     }
-    
-    
-    
+
 }

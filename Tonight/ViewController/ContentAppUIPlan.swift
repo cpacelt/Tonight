@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 // MARK: ContentAppVCPreferences incapsulate preferences needed to apply to ViewControllers
 // Important ability
 // let isEmbeddedInNavigation: Bool to say ContentAppUIBuilder that you want to builtin ViewController in navigation
@@ -33,8 +32,6 @@ final class ContentAppVCPreferences {
         self.tabBarItem = tabBarItem
         self.preferLargeTitles = preferLargeTitles
     }
-    
-    
 }
 
 
@@ -60,7 +57,9 @@ extension UITabBarItem {
     }()
 }
 
-// MARK: ContentAppUIPlan class wrap ViewControllers, its properties and global UI propertyes (global tint color for example) and pass it to ContentAppUIBuilder for building and setup
+// MARK: ContentAppUIPlan
+// class wrap ViewControllers, its properties and global UI propertyes (global tint color for example)
+// and pass it to ContentAppUIBuilder for building and setup
 //
 
 final class ContentAppUIPlan {

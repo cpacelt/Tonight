@@ -50,6 +50,12 @@ class FilmCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         contentView.addSubview(genresLabel)
         
+        self.makeLayout()
+        
+    }
+    
+    //MARK: - Constraints setting
+    private func makeLayout() {
         posterImageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         genresLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +70,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
         
         genresLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
         genresLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
-        
     }
     
     required init?(coder: NSCoder) {

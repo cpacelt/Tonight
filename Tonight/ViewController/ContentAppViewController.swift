@@ -64,7 +64,6 @@ class ContentAppViewController<T: UIView>: UIViewController {
         initialContentOffset = backgroundScrollView.contentOffset
         
         let view = UIView()
-        UIDynamicAnimator
     }
     
     // Large title scroll issue

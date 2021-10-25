@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PairedRaitingView: UIView {
+final class PairedRaitingView: UIView {
 
     
     let firstRaitingView = RaitingView()

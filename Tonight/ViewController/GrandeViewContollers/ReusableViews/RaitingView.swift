@@ -9,9 +9,9 @@ import UIKit
 
 final class RaitingView: UIView {
     
-    var pointsLabel = UILabel()
-    var titleLabel = UILabel()
-    var suffixLabel = UILabel()
+    private var pointsLabel = UILabel()
+    private var titleLabel = UILabel()
+    private var suffixLabel = UILabel()
 
     private func prepare(with points: Int = 0, labeled title: String = "", _ suffix: String = "%") {
        

@@ -8,7 +8,7 @@
 import UIKit
 
 class RoundedRectView<T: UIView>: UIView {
-
+    
     //MARK: - Rounded rect (container) view
     let roundedRect: UIView = {
         let view = UIView()
@@ -19,7 +19,7 @@ class RoundedRectView<T: UIView>: UIView {
         view.layer.shadowOpacity = 0.1
         
         let borderColor = UIColor(white: 0.05, alpha: 0.1)
-      
+        
         view.layer.borderColor = borderColor.cgColor
         view.layer.borderWidth = 0.6
         //view.layer.shadowRadius = 5
@@ -31,7 +31,7 @@ class RoundedRectView<T: UIView>: UIView {
     }()
     
     
-
+    
     
     init() {
         super.init(frame: CGRect.zero)
@@ -41,17 +41,15 @@ class RoundedRectView<T: UIView>: UIView {
         
         roundedRect.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         roundedRect.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         roundedRect.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         roundedRect.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         roundedRect.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        
-        
-        // So bad layout input view is superview... 
+
         contentView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         contentView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-
+        
     }
     
     required init?(coder: NSCoder) {

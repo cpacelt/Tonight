@@ -43,8 +43,8 @@ final class BestViewController: UICollectionViewController {
         self.view.backgroundColor = .systemBackground
         self.title = self.tabBarItem.title
         
-        collectionView.register(FilmCollectionViewCell.self, forCellWithReuseIdentifier: FilmCollectionViewCell.identifier)
-        
+        collectionView.register(FilmViewCell.self, forCellWithReuseIdentifier: FilmViewCell.reuseIdentifier)
+ 
     }
     
     //MARK: - Delegate methods
@@ -52,10 +52,14 @@ final class BestViewController: UICollectionViewController {
         return 10
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(DetailViewController(UIImage(named: "dune")!), animated: true)
+        
+    }
     //MARK: - Datasource methods
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmCollectionViewCell.identifier, for: indexPath) as! FilmCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmViewCell.reuseIdentifier, for: indexPath) as! FilmViewCell
         
         cell.posterImageView.image = UIImage(named: "dune")
         

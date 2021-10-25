@@ -10,7 +10,7 @@ import UIKit
 final class AccountViewController: UICollectionViewController {
     //MARK: - Inits
     init() {
-        // Init self without layout crash App
+        // Init self without layout crashs App
         super.init(collectionViewLayout: layout)
     }
     
@@ -73,6 +73,6 @@ final class AccountViewController: UICollectionViewController {
     
     // MARK: - DataSource methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
 }

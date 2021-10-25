@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class FilmCollectionViewCell: UICollectionViewCell {
+final class FilmViewCell: UICollectionViewCell {
     //MARK: - Identifier
-    static let identifier = "FilmCollectionViewCellIdentifier"
+    static let reuseIdentifier = "FilmCollectionViewCellIdentifier"
     
     //MARK: - Subvies
     //

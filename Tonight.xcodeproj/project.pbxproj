@@ -26,6 +26,10 @@
 		D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E863F2715C1290004D1DD /* PairedRaitingView.swift */; };
 		D6BDA1A82726AE01001FB316 /* AccountHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1A72726AE01001FB316 /* AccountHeaderViewCell.swift */; };
 		D6BDA1AA2726B40E001FB316 /* AccountRaitingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1A92726B40E001FB316 /* AccountRaitingViewCell.swift */; };
+		D6BDA1B02726F7F9001FB316 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1AF2726F7F9001FB316 /* DetailViewController.swift */; };
+		D6BDA1B2272706B1001FB316 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1B1272706B1001FB316 /* DetailHeaderView.swift */; };
+		D6BDA1B62727304E001FB316 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1B52727304E001FB316 /* SearchViewController.swift */; };
+		D6BDA1B82727309F001FB316 /* CompilationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BDA1B72727309F001FB316 /* CompilationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		D67E863F2715C1290004D1DD /* PairedRaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedRaitingView.swift; sourceTree = "<group>"; };
 		D6BDA1A72726AE01001FB316 /* AccountHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHeaderViewCell.swift; sourceTree = "<group>"; };
 		D6BDA1A92726B40E001FB316 /* AccountRaitingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRaitingViewCell.swift; sourceTree = "<group>"; };
+		D6BDA1AF2726F7F9001FB316 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D6BDA1B1272706B1001FB316 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
+		D6BDA1B52727304E001FB316 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D6BDA1B72727309F001FB316 /* CompilationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,20 +117,22 @@
 			children = (
 				D61E18DB2714852B0057147D /* CAppUIBuilder.swift */,
 				D61E18DC2714852B0057147D /* CAppUIPlan.swift */,
-				D61E18DA271484F40057147D /* GrandeViewContollers */,
+				D61E18DA271484F40057147D /* GrandeViewControllers */,
 				D6BDA1AE2726D138001FB316 /* DetailViewController */,
 				D6BDA1AB2726C4EB001FB316 /* ReusableViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		D61E18DA271484F40057147D /* GrandeViewContollers */ = {
+		D61E18DA271484F40057147D /* GrandeViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6BDA1B427272FEE001FB316 /* CompilationsViewController */,
+				D6BDA1B327272FB2001FB316 /* SearchViewController */,
 				D65AE4752716C3B1004DA9A2 /* BestViewController */,
 				D65AE4742716C0CF004DA9A2 /* AccountViewController */,
 			);
-			path = GrandeViewContollers;
+			path = GrandeViewControllers;
 			sourceTree = "<group>";
 		};
 		D65AE4742716C0CF004DA9A2 /* AccountViewController */ = {
@@ -158,8 +168,26 @@
 		D6BDA1AE2726D138001FB316 /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D6BDA1AF2726F7F9001FB316 /* DetailViewController.swift */,
+				D6BDA1B1272706B1001FB316 /* DetailHeaderView.swift */,
 			);
 			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		D6BDA1B327272FB2001FB316 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6BDA1B52727304E001FB316 /* SearchViewController.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		D6BDA1B427272FEE001FB316 /* CompilationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6BDA1B72727309F001FB316 /* CompilationsViewController.swift */,
+			);
+			path = CompilationsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,15 +268,19 @@
 				D67E863E27159CC20004D1DD /* RaitingView.swift in Sources */,
 				D61E18DE2714852B0057147D /* CAppUIBuilder.swift in Sources */,
 				D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */,
+				D6BDA1B2272706B1001FB316 /* DetailHeaderView.swift in Sources */,
 				D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */,
 				D61E18C12714846F0057147D /* AppDelegate.swift in Sources */,
 				D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */,
 				D65AE4792716EE70004DA9A2 /* FilmViewCell.swift in Sources */,
 				D6BDA1A82726AE01001FB316 /* AccountHeaderViewCell.swift in Sources */,
+				D6BDA1B62727304E001FB316 /* SearchViewController.swift in Sources */,
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
 				D6BDA1AA2726B40E001FB316 /* AccountRaitingViewCell.swift in Sources */,
 				D61E18DF2714852B0057147D /* CAppUIPlan.swift in Sources */,
 				D61E18E72714854E0057147D /* AccountViewController.swift in Sources */,
+				D6BDA1B82727309F001FB316 /* CompilationsViewController.swift in Sources */,
+				D6BDA1B02726F7F9001FB316 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

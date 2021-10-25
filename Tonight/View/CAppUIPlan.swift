@@ -79,8 +79,8 @@ final class CAppUIPlan {
 extension CAppUIPlan {
     static var tonightAppPlan: CAppUIPlan? = CAppUIPlan(forControllersWithPreferences: [
         (BestViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
-        (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
-        (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
+        (CompilationsViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
+        (SearchViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
         (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .account, true))
     ],
     globalTintColor: UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1))

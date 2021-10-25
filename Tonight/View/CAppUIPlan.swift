@@ -22,7 +22,7 @@ import UIKit
 //  ContentAppUIBuilder<UITabBarController, UINavigationController>(with: plan, on: self.window)
 //
 
-final class ContentAppVCPreferences {
+final class CAppVCPreferences {
     let isEmbeddedInNavigation: Bool?
     let tabBarItem: UITabBarItem?
     let preferLargeTitles: Bool?
@@ -62,13 +62,13 @@ extension UITabBarItem {
 // and pass it to ContentAppUIBuilder for building and setup
 //
 
-final class ContentAppUIPlan {
+final class CAppUIPlan {
     
     let globalTintColor: UIColor?
     
-    let items: [(viewController: UIViewController, preferences: ContentAppVCPreferences)]?
+    let items: [(viewController: UIViewController, preferences: CAppVCPreferences)]?
     
-    init(forControllersWithPreferences viewControllers: [(viewController: UIViewController, preferences: ContentAppVCPreferences)]? = nil, globalTintColor color: UIColor? = nil) {
+    init(forControllersWithPreferences viewControllers: [(viewController: UIViewController, preferences: CAppVCPreferences)]? = nil, globalTintColor color: UIColor? = nil) {
         self.items = viewControllers
         self.globalTintColor = color
     }
@@ -76,12 +76,12 @@ final class ContentAppUIPlan {
 }
 
 // MARK: Extension of ContentAppUIPlan which stored Tonight.app bulding plan
-extension ContentAppUIPlan {
-    static let tonightAppPlan = ContentAppUIPlan(forControllersWithPreferences: [
-        (BestViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
-        (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
-        (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
-        (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .account, true))
+extension CAppUIPlan {
+    static var tonightAppPlan: CAppUIPlan? = CAppUIPlan(forControllersWithPreferences: [
+        (BestViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
+        (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
+        (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
+        (AccountViewController(), CAppVCPreferences(isEmbeddedInNavigation: true, .account, true))
     ],
     globalTintColor: UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1))
 }

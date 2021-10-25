@@ -13,10 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        let plan = ContentAppUIPlan.tonightAppPlan
-        ContentAppUIBuilder<UITabBarController, UINavigationController>(with: plan, on: self.window)
-   
+       
+        let plan = CAppUIPlan.tonightAppPlan
+        CAppUIBuilder<UITabBarController, UINavigationController>(with: plan!, on: self.window)
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.

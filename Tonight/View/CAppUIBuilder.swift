@@ -28,15 +28,15 @@ import UIKit
 
 
 
-final class ContentAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
+final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     
     let window: UIWindow?
     private(set) var mainTabBarController: TB
-    private let plan: ContentAppUIPlan?
+    private let plan: CAppUIPlan?
     private(set) var viewControllersToTabBar = [UIViewController]()
     
 
-    init(with plan: ContentAppUIPlan, on window: UIWindow?) {
+    init(with plan: CAppUIPlan, on window: UIWindow?) {
         
         self.window = window
         self.mainTabBarController = TB()
@@ -117,4 +117,8 @@ final class ContentAppUIBuilder<TB: UITabBarController, NC: UINavigationControll
         self.vcsDidBuiltedInTabBar()
      }
     
+    deinit {
+        // Delete last shared reference to free memory
+        CAppUIPlan.tonightAppPlan = nil
+    }
 }

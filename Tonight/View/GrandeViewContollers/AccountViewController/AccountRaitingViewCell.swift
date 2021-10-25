@@ -8,12 +8,15 @@
 import UIKit
 
 final class AccountRaitingViewCell: UICollectionViewCell {
+    //MARK: - Identifier
     static let identifier = "accountRaitingCellIdentifier"
     
+    // MARK: - Subviews
     let accountRaitingView: RoundedRectView<PairedRaitingView> = {
         return RoundedRectView<PairedRaitingView>()
     }()
     
+    // MARK: - Inits
     override init(frame: CGRect){
         super.init(frame: .zero)
         
@@ -22,6 +25,9 @@ final class AccountRaitingViewCell: UICollectionViewCell {
         self.makeLayout()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     //MARK: - Constraints setting
     private func makeLayout() {
         accountRaitingView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,8 +37,5 @@ final class AccountRaitingViewCell: UICollectionViewCell {
         accountRaitingView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         accountRaitingView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

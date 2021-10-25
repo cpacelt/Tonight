@@ -8,13 +8,12 @@
 import UIKit
 
 
-class AccountHeaderView: UIView {
+final class AccountHeaderView: UIView {
     
-    // MARK: - Avatar Image
+    //MARK: - Subviews
+    // Avatar Image
     let avatarImageView: UIImageView = {
-        let avatarImageName = "avatar"
-        let image = UIImage(named: avatarImageName)
-        let avatarImageView = UIImageView(image: image)
+        let avatarImageView = UIImageView()
         avatarImageView.contentMode = .scaleAspectFit
        // avatarImageView.layer.borderColor = UIColor.white.cgColor
         avatarImageView.layer.borderColor = UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1).cgColor
@@ -23,7 +22,7 @@ class AccountHeaderView: UIView {
         return avatarImageView
     }()
 
-    // MARK: - Nickname label
+    //Nickname label
     let nicknameLabel: UILabel = {
         let text = "cpacelt"
         let label = UILabel()
@@ -36,7 +35,7 @@ class AccountHeaderView: UIView {
         return label
     }()
 
-    //MARK: - Email label
+    //Email label
     let emailLabel: UILabel = {
         let text = "cpacelt@gmail.com"
         let label = UILabel()
@@ -49,7 +48,7 @@ class AccountHeaderView: UIView {
         return label
     }()
 
-    //MARK: - Register since label
+    //Register since label
     let registeredSinceLabel: UILabel = {
         let date = "Смотрю кино с октября 2015 года"
         let label = UILabel()
@@ -62,6 +61,7 @@ class AccountHeaderView: UIView {
         return label
     }()
 
+    // MARK: - Inits
     init() {
         super.init(frame: CGRect.zero)
         
@@ -69,7 +69,16 @@ class AccountHeaderView: UIView {
         self.addSubview(self.nicknameLabel)
         self.addSubview(self.emailLabel)
         self.addSubview(self.registeredSinceLabel)
-        
+              
+        makeLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Constraints setting
+    private func makeLayout() {
         self.avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         self.nicknameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.emailLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -92,13 +101,6 @@ class AccountHeaderView: UIView {
         registeredSinceLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor).isActive = true
         
         self.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor).isActive = true
-      
-        // Constraints checking
-        //self.backgroundColor = .systemIndigo
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 

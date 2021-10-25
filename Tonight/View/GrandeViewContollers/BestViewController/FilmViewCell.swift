@@ -7,10 +7,12 @@
 
 import UIKit
 
-class FilmCollectionViewCell: UICollectionViewCell {
-    
+final class FilmCollectionViewCell: UICollectionViewCell {
+    //MARK: - Identifier
     static let identifier = "FilmCollectionViewCellIdentifier"
     
+    //MARK: - Subvies
+    //
     let titleLabel: UILabel = {
         let label = UILabel()
         label.attributedText = NSAttributedString(
@@ -35,14 +37,14 @@ class FilmCollectionViewCell: UICollectionViewCell {
     
     
     let posterImageView: UIImageView = {
-        let image = UIImage(named: "dune")
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 15
         imageView.clipsToBounds = true
         return imageView
     }()
     
+    //MARK: - Inits
     override init(frame: CGRect){
         super.init(frame: .zero)
         
@@ -54,6 +56,10 @@ class FilmCollectionViewCell: UICollectionViewCell {
         
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     //MARK: - Constraints setting
     private func makeLayout() {
         posterImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,10 +76,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
         
         genresLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20).isActive = true
         genresLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

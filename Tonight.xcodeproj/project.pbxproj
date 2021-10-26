@@ -21,6 +21,7 @@
 		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
 		D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E927148BDC0057147D /* RoundedRectView.swift */; };
 		D6425F80272833BD002E50BA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6425F7F272833BD002E50BA /* Movie.swift */; };
+		D6425F8227283D23002E50BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6425F8127283D23002E50BA /* NetworkManager.swift */; };
 		D65AE4772716C584004DA9A2 /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4762716C584004DA9A2 /* BestViewController.swift */; };
 		D65AE4792716EE70004DA9A2 /* FilmViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AE4782716EE70004DA9A2 /* FilmViewCell.swift */; };
 		D65AE47B2717140D004DA9A2 /* dune.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D65AE47A2717140D004DA9A2 /* dune.jpeg */; };
@@ -53,6 +54,7 @@
 		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		D61E18E927148BDC0057147D /* RoundedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectView.swift; sourceTree = "<group>"; };
 		D6425F7F272833BD002E50BA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D6425F8127283D23002E50BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D65AE4762716C584004DA9A2 /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		D65AE4782716EE70004DA9A2 /* FilmViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewCell.swift; sourceTree = "<group>"; };
 		D65AE47A2717140D004DA9A2 /* dune.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dune.jpeg; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D6425F7F272833BD002E50BA /* Movie.swift */,
+				D6425F8127283D23002E50BA /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				D6BDA1B62727304E001FB316 /* SearchViewController.swift in Sources */,
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
 				D6BDA1AA2726B40E001FB316 /* AccountRaitingViewCell.swift in Sources */,
+				D6425F8227283D23002E50BA /* NetworkManager.swift in Sources */,
 				D61E18DF2714852B0057147D /* CAppUIPlan.swift in Sources */,
 				D61E18E72714854E0057147D /* AccountViewController.swift in Sources */,
 				D6BDA1B82727309F001FB316 /* CompilationsViewController.swift in Sources */,

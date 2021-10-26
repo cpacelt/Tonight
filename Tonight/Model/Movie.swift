@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct Movie {
-    let id: Int
+struct Movie : ApiConforming {
+    
+    static var apiPath: String? = "movie/"
+    
+    let id: Int?
     let isAdult: Bool?
     let title: String?
     let overview: String?
@@ -16,9 +19,17 @@ struct Movie {
     
     let genres: [Genre]?
     
+    enum CodingKeys: String, CodingKey {
+        case id
+        case isAdult
+        case title
+        case overview
+        case posterPath = "poster_path"
+        case genres
+      }
 }
 
-struct Genre {
+struct Genre: Decodable {
     let id: Int?
     let name: String?
 }

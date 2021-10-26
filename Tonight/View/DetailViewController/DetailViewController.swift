@@ -78,7 +78,16 @@ final class DetailViewController: UICollectionViewController{
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DetailHeaderView.reuseIdentifier, for: indexPath) as! DetailHeaderView
         
-        header.posterImageView.image = posterImage
+        let m = NetworkManager()
+        m.get(Movie.self, byId: 438631) { movie in
+            m.getData(withPath: movie.posterPath!) { data in
+                DispatchQueue.main.async {
+                    header.posterImageView.image = UIImage(data: data!)
+                }
+            }
+        }
+        
+        
         
         return header
     }

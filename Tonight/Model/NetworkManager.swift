@@ -9,9 +9,11 @@ import Foundation
 import Alamofire
 
 
-protocol ApiConforming : Decodable {
+protocol ApiObject : Decodable {
     static var apiPath: String? { get }
 }
+
+
 
 struct Api {
     static let baseUrl = "https://api.themoviedb.org/3/"
@@ -20,17 +22,30 @@ struct Api {
     static let baseParameters = ["api_key" : "3c4f8fed562b01d53571dfb7569a5275",
                                  "language" : "ru-RU"]
     
+    enum Additions: String {
+        case topRated = "top_rated"
+    }
+    
 }
-
 
 
 final class NetworkManager {
     
-    func get<T: ApiConforming>(_ ofType: T.Type,
+    func get<T: ApiObject>(_ ofType: T.Type,
                                byId id: Int,
                                completion: @escaping (T) -> Void) {
         
         AF.request(Api.baseUrl + T.apiPath! + String(id), parameters: Api.baseParameters).responseDecodable(of: ofType) { response in guard let resultInstance = response.value else { return }
+            completion(resultInstance)
+        }
+        
+    }
+    
+    func get<T: ApiObject>(_ Type: T.Type,
+                           with additions: Api.Additions,
+                               completion: @escaping (T) -> Void) {
+        
+        AF.request(Api.baseUrl + T.apiPath! + additions.rawValue, parameters: Api.baseParameters).responseDecodable(of: Type) { response in guard let resultInstance = response.value else { return }
             completion(resultInstance)
         }
         

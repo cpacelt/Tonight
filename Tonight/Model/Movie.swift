@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Movie : ApiConforming {
+
+
+struct Movie : ApiObject {
     
     static var apiPath: String? = "movie/"
     

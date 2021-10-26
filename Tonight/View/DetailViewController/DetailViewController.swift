@@ -33,7 +33,7 @@ final class DetailViewController: UICollectionViewController{
         
         // Header
         let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),
-                                                      heightDimension: .fractionalHeight(0.4))
+                                                      heightDimension: .fractionalWidth(1))
         let header = NSCollectionLayoutBoundarySupplementaryItem(
                         layoutSize: footerHeaderSize,
                         elementKind: UICollectionView.elementKindSectionHeader,
@@ -80,7 +80,7 @@ final class DetailViewController: UICollectionViewController{
         
         let m = NetworkManager()
         m.get(Movie.self, byId: 438631) { movie in
-            m.getData(withPath: movie.posterPath!) { data in
+            m.getData(from: movie.posterPath!) { data in
                 DispatchQueue.main.async {
                     header.posterImageView.image = UIImage(data: data!)
                 }

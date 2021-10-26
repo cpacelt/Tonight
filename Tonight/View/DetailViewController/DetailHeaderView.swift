@@ -18,6 +18,8 @@ final class DetailHeaderView: UICollectionReusableView {
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 7
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .systemGray
+        
         return imageView
     }()
     

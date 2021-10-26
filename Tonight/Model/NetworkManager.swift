@@ -36,7 +36,7 @@ final class NetworkManager {
         
     }
     
-    func getData(withPath path: String,
+    func getData(from path: String,
                  onQueue queue: DispatchQueue = DispatchQueue.global(qos: .background),
                  _ completion: @escaping (Data?) -> Void ) {
         queue.async {

@@ -35,9 +35,9 @@ final class DetailViewController: UICollectionViewController{
         let footerHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),
                                                       heightDimension: .fractionalWidth(1))
         let header = NSCollectionLayoutBoundarySupplementaryItem(
-                        layoutSize: footerHeaderSize,
-                        elementKind: UICollectionView.elementKindSectionHeader,
-                        alignment: .top)
+            layoutSize: footerHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
         header.extendsBoundary = true
         
         let section = NSCollectionLayoutSection(group: group)
@@ -55,7 +55,7 @@ final class DetailViewController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         collectionView.register(DetailHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DetailHeaderView.reuseIdentifier)
         
         
@@ -78,20 +78,13 @@ final class DetailViewController: UICollectionViewController{
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DetailHeaderView.reuseIdentifier, for: indexPath) as! DetailHeaderView
         
-        let m = NetworkManager()
-        m.get(Movie.self, byId: 438631) { movie in
-            m.getData(from: movie.posterPath!) { data in
-                DispatchQueue.main.async {
-                    header.posterImageView.image = UIImage(data: data!)
-                }
-            }
-        }
+        header.posterImageView.image = posterImage
         
         
         
         return header
     }
-
+    
     
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -103,4 +96,7 @@ final class DetailViewController: UICollectionViewController{
         
     }
     
+    deinit{
+        print("Detail deinit")
+    }
 }

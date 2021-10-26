@@ -7,7 +7,15 @@
 
 import Foundation
 
-
+struct MovieList: ApiObject {
+    static var apiPath: String? = "movie/"
+    
+    let movies: [Movie]?
+    
+    enum CodingKeys: String, CodingKey {
+        case movies = "results"
+      }
+}
 
 struct Movie : ApiObject {
     
@@ -19,7 +27,7 @@ struct Movie : ApiObject {
     let overview: String?
     let posterPath: String?
     
-    let genres: [Genre]?
+    var genres: [Genre]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,6 +38,7 @@ struct Movie : ApiObject {
         case genres
       }
 }
+
 
 struct Genre: Decodable {
     let id: Int?

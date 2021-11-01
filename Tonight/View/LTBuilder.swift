@@ -7,40 +7,45 @@
 
 import UIKit
 
-
-// MARK: ContentAppUIBuilder
+// MARK: LTBuilder
 // Class to build default application UI with UITabBarController and UINavigationController or its
 // inheritors.
-//    Array of ViewControllers and its preferences passes to builder in wrapper instance. Wrapper name is ContentAppUIPlan.
-// Builder should place in AppDelegate or SceneDelegate.
- 
-// For example:
- 
-// let tonightAppPlan = ContentAppUIPlan(forControllersWithPreferences: [
-//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .best, true)),
-//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .films, true)),
-//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .search, true)),
-//     (AccountViewController(), ContentAppVCPreferences(isEmbeddedInNavigation: true, .account, true))
-// ],
-// globalTintColor: UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1))
 //
-// ContentAppUIBuilder<UITabBarController, UINavigationController>(with: plan, on: self.window)
+// Array of ViewControllers and its preferences passes to builder in wrapper instance. Wrapper name is LTFrame.
+// Builder should place in AppDelegate or SceneDelegate.
+// For ex:
+//         let frame = LTFrame.tonightFrame
+//         LTBuilder<UITabBarController, UINavigationController>(with: frame!, on: self.window)
 
+ 
+// For ex:
+//
+//  extension LTFrame {
+//      static var tonightFrame: LTFrame? = {
+//
+//            let frame = LTFrame([ LTScreen( BestViewController(), inNav: true, .best),
+//                                  LTScreen( CompilationsViewController(), inNav: true, .films),
+//                                  LTScreen( SearchViewController(), inNav: true, .search),
+//                                  LTScreen( AccountViewController(), inNav: true, .account) ])
+//          frame.tintColor = UIColor(red: 1 / 255, green: 180 / 255, blue: 228 / 255, alpha: 1)
+//
+//          return frame
+//      }()
+//  }
 
-
-final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
+final class LTBuilder<TB: UITabBarController, NC: UINavigationController> {
     
     let window: UIWindow?
     private(set) var mainTabBarController: TB
-    private let plan: CAppUIPlan?
+    private let frame: LTFrame?
     private(set) var viewControllersToTabBar = [UIViewController]()
     
 
-    init(with plan: CAppUIPlan, on window: UIWindow?) {
+    init(with frame: LTFrame, on window: UIWindow?) {
         
         self.window = window
         self.mainTabBarController = TB()
-        self.plan = plan
+        self.frame = frame
 
         // WARNING: Avoid change the direction of calling this functions, if you need setup ViewControllers
         // do it in vcsDidBuiltedInTabBar() and vcsDidBuiltedInNavigations() functions.
@@ -55,7 +60,7 @@ final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     }
     
     private func initialWindowSetup(){
-        self.window?.tintColor = self.plan?.globalTintColor
+        self.window?.tintColor = self.frame?.tintColor
         
         // To setup global UI properties put your code here...
         //
@@ -64,27 +69,18 @@ final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     
     private func initialVCsSetup() {
         // This function calling before builting ViewControllers in navigation and tabbar
-        guard let plan = self.plan else { return }
-        guard let planItems = plan.items else { return }
+        guard let frame = self.frame else { return }
+        guard let screens = frame.items else { return }
         
-        for planItem in planItems {
-            planItem.viewController.tabBarItem = planItem.preferences.tabBarItem
+        for screen in screens {
+            screen.vc.tabBarItem = screen.tabBarItem
          }
-        
-        
     }
     
     private func vcsDidBuiltedInNavigations() {
         // This function calling after builting ViewControllers in navigation and you can
         // use navigationBar property here
-        
-        guard let plan = self.plan else { return }
-        guard let planItems = plan.items else { return }
-        
-        for planItem in planItems {
-            planItem.viewController.navigationController?.navigationBar.prefersLargeTitles = planItem.preferences.preferLargeTitles ?? false
-         }
-        
+
     }
     
     private func vcsDidBuiltedInTabBar() {
@@ -96,16 +92,16 @@ final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     }
     
     private func buildVCsInNavigations() {
-        guard let plan = self.plan else { return }
-        guard let planItems = plan.items else { return }
+        guard let frame = self.frame else { return }
+        guard let screens = frame.items else { return }
         
-        for planItem in planItems {
-            guard let isNeedToEmbed = planItem.preferences.isEmbeddedInNavigation else { return }
+        for screen in screens {
+            guard let isNeedToEmbed = screen.isInNav else { return }
             if isNeedToEmbed {
-                let navigationControllerWithVC = NC(rootViewController: planItem.viewController)
+                let navigationControllerWithVC = NC(rootViewController: screen.vc)
                  viewControllersToTabBar.append(navigationControllerWithVC)
              } else {
-                 viewControllersToTabBar.append(planItem.viewController)
+                 viewControllersToTabBar.append(screen.vc)
              }
          }
         
@@ -119,6 +115,6 @@ final class CAppUIBuilder<TB: UITabBarController, NC: UINavigationController> {
     
     deinit {
         // Delete last shared reference to free memory
-        CAppUIPlan.tonightAppPlan = nil
+        LTFrame.tonightFrame = nil
     }
 }

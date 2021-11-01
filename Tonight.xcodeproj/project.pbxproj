@@ -15,8 +15,8 @@
 		D61E18CD271484700057147D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61E18CB271484700057147D /* LaunchScreen.storyboard */; };
 		D61E18D52714848D0057147D /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D61E18D42714848D0057147D /* unnamed.jpg */; };
 		D61E18D7271484B60057147D /* photo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D61E18D6271484B60057147D /* photo.jpeg */; };
-		D61E18DE2714852B0057147D /* CAppUIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DB2714852B0057147D /* CAppUIBuilder.swift */; };
-		D61E18DF2714852B0057147D /* CAppUIPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DC2714852B0057147D /* CAppUIPlan.swift */; };
+		D61E18DE2714852B0057147D /* LTBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DB2714852B0057147D /* LTBuilder.swift */; };
+		D61E18DF2714852B0057147D /* LTFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18DC2714852B0057147D /* LTFrame.swift */; };
 		D61E18E72714854E0057147D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E32714854E0057147D /* AccountViewController.swift */; };
 		D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E42714854E0057147D /* AccountHeaderView.swift */; };
 		D61E18EA27148BDC0057147D /* RoundedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E18E927148BDC0057147D /* RoundedRectView.swift */; };
@@ -48,8 +48,8 @@
 		D61E18CE271484700057147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61E18D42714848D0057147D /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unnamed.jpg; sourceTree = "<group>"; };
 		D61E18D6271484B60057147D /* photo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpeg; sourceTree = "<group>"; };
-		D61E18DB2714852B0057147D /* CAppUIBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAppUIBuilder.swift; sourceTree = "<group>"; };
-		D61E18DC2714852B0057147D /* CAppUIPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAppUIPlan.swift; sourceTree = "<group>"; };
+		D61E18DB2714852B0057147D /* LTBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTBuilder.swift; sourceTree = "<group>"; };
+		D61E18DC2714852B0057147D /* LTFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTFrame.swift; sourceTree = "<group>"; };
 		D61E18E32714854E0057147D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D61E18E42714854E0057147D /* AccountHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountHeaderView.swift; sourceTree = "<group>"; };
 		D61E18E927148BDC0057147D /* RoundedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectView.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		D61E18D9271484E10057147D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D61E18DB2714852B0057147D /* CAppUIBuilder.swift */,
-				D61E18DC2714852B0057147D /* CAppUIPlan.swift */,
+				D61E18DB2714852B0057147D /* LTBuilder.swift */,
+				D61E18DC2714852B0057147D /* LTFrame.swift */,
 				D61E18DA271484F40057147D /* GrandeViewControllers */,
 				D6BDA1AE2726D138001FB316 /* DetailViewController */,
 				D6BDA1AB2726C4EB001FB316 /* ReusableViews */,
@@ -340,7 +340,7 @@
 			files = (
 				D65AE4772716C584004DA9A2 /* BestViewController.swift in Sources */,
 				D67E863E27159CC20004D1DD /* RaitingView.swift in Sources */,
-				D61E18DE2714852B0057147D /* CAppUIBuilder.swift in Sources */,
+				D61E18DE2714852B0057147D /* LTBuilder.swift in Sources */,
 				D61E18E82714854E0057147D /* AccountHeaderView.swift in Sources */,
 				D6BDA1B2272706B1001FB316 /* DetailHeaderView.swift in Sources */,
 				D67E86402715C1290004D1DD /* PairedRaitingView.swift in Sources */,
@@ -353,7 +353,7 @@
 				D61E18C32714846F0057147D /* SceneDelegate.swift in Sources */,
 				D6BDA1AA2726B40E001FB316 /* AccountRaitingViewCell.swift in Sources */,
 				D6425F8227283D23002E50BA /* NetworkManager.swift in Sources */,
-				D61E18DF2714852B0057147D /* CAppUIPlan.swift in Sources */,
+				D61E18DF2714852B0057147D /* LTFrame.swift in Sources */,
 				D61E18E72714854E0057147D /* AccountViewController.swift in Sources */,
 				D6BDA1B82727309F001FB316 /* CompilationsViewController.swift in Sources */,
 				D6BDA1B02726F7F9001FB316 /* DetailViewController.swift in Sources */,

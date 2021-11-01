@@ -14,8 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
-        let plan = CAppUIPlan.tonightAppPlan
-        CAppUIBuilder<UITabBarController, UINavigationController>(with: plan!, on: self.window)
+        let frame = LTFrame.tonightFrame
+        LTBuilder<UITabBarController, UINavigationController>(with: frame!, on: self.window)
         
         
         
